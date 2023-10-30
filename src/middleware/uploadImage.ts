@@ -7,7 +7,7 @@ import fs from "fs";
 //The disk storage engine gives you full control on storing files to disk.
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    console.log("dest1", __dirname);
+    console.log("dest1", __dirname, process.cwd());
     cb(null, path.join(__dirname, "../assets/images"));
   },
   filename: function (req, file, cb) {
