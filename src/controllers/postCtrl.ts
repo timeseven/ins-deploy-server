@@ -17,7 +17,6 @@ const createPost = asyncHandler(async (req: IReqAuth, res: Response): Promise<an
     if (files.length === 0) {
       return res.status(400).json({ msg: "Please upload your images or videos" });
     }
-    console.log("create", files);
     // handle fils
     for (const file of files) {
       const { path } = file;
